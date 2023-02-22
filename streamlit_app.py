@@ -79,17 +79,13 @@ streamlit.write('The user entered', fruit_choice)
 
 #streamlit.text(fruityvice_response.json())
 
-streamlit.stop()
+#streamlit.stop()
 
 if steamlit.button('Get Fruit Load List'):
 	my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 	my_data_rows = get_fruit_load_list()
 	streamlit.dataframe(my_data_rows)
 
-my_cur = my_cnx.cursor()
-
-my_cur.execute("USE ROLE ACCOUNTADMIN")
-my_cur.execute("SELECT * FROM PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?', '')
 
