@@ -13,8 +13,8 @@ def get_fruityvice_data(this_fruit_choice):
 
 def get_fruit_load_list(self):
 	with my_cnx.cursor() as my_cur:
-	my_cur.execute("select * from fruit_load_list")
-	return my_cur.fetchall()
+		my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
+		return my_cur.fetchall()
 def insert_row_snowflake(new_fruit):
 	with my_cnx.cursor() as my_cur:
 		my_cur.execute("insert intodef insert_row_snowflake(new_fruit):
