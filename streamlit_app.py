@@ -95,9 +95,6 @@ if streamlit.button('Add a Fruit to the list'):
 	streamlit.text(back_from_function)
 
 	streamlit.write('Thanks for adding', add_my_fruit)
-my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
-
-my_data_row = my_cur.fetchall()
 
 
 streamlit.text("The fruit load list contains:")
