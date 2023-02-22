@@ -98,5 +98,5 @@ if streamlit.button('Add a Fruit to the list'):
 
 
 #streamlit.text("The fruit load list contains:")
-#streamlit.dataframe(my_data_row)
+streamlit.dataframe(get_fruit_load_list())
 
