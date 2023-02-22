@@ -20,6 +20,9 @@ def insert_row_snowflake(new_fruit):
 		my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')")
 		return "Thanks for adding " + new_fruit
 
+my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+my_cur = my_cnx.cursor()
+
 
 streamlit.title('My Mom\'s New Healthy Diner')
 
